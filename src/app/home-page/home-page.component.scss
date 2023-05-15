@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@import '../../styles.scss';
+
+.hero{
+
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  padding: 8em 6em;
+  background: linear-gradient(
+    45deg,
+    mat.get-color-from-palette($kanban-primary, 200),
+    #ffffff00,
+  );
+  & > .hero-header{
+    font-size: 3em;
+    color: mat.get-color-from-palette($kanban-primary, 700)
+  }
+
+  & > .hero-description{
+
+  }
+}

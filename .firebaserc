@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanban-39b69": {
+      "hosting": {
+        "kanban": [
+          "kanban-39b69"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanban-39b69"
+  }
+}

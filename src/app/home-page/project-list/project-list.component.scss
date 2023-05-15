@@ -1,0 +1,10 @@
+.projects-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5em 4em;
+  & > div {
+    height: 300px;
+  }
+}

@@ -56,7 +56,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -97,8 +103,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "kanban:build:production",
+            "firebaseProject": "kanban-39b69",
+            "firebaseHostingSite": "kanban-39b69"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1f6bb957-7fa6-4226-829d-dd5fffc032e1"
   }
 }
