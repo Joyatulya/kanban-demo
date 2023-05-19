@@ -1,5 +1,20 @@
-<h1>Login Page</h1>
-<h2 *ngIf="afAuth.authState | async as user">Welcome {{user.displayName}}</h2>
-<button mat-raised-button color="accent" (click)="authService.GoogleAuth()"> Login with Google</button>
-<button mat-raised-button color="primary" (click)="afAuth.signOut()"> Logout </button>
-<h3 > Then name of the user is {{userName}}</h3>
+<main>
+  <h1>Login Page</h1>
+  <h2 *ngIf="afAuth.authState | async as user">
+    Welcome {{ user.displayName }}
+  </h2>
+  <button *ngIf="!(afAuth.authState | async)" mat-raised-button color="primary" (click)="authService.GoogleAuth()">
+     Login with Google
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="afAuth.authState | async"
+    color="primary"
+    (click)="afAuth.signOut()"
+  >
+    Logout
+  </button>
+
+  <h2 *ngIf = '!(afAuth.authState | async)'>OR</h2>
+  <app-email-login *ngIf = '!(afAuth.authState | async)'></app-email-login>
+</main>

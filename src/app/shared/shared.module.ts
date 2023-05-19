@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MediumCardComponent } from './medium-card/medium-card.component';
 import { MatCardModule } from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const components: any = [
   ShellComponent,
@@ -24,6 +26,8 @@ const modules = [
   MatListModule,
   MatIconModule,
   MatCardModule,
+  MatProgressSpinnerModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

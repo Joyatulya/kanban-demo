@@ -21,4 +21,15 @@ export class AuthService {
       .catch((e) => console.log(e));
   }
 
+  async EmailLogin(email: string, password: string) {
+    return this.afAuth.signInWithEmailAndPassword(email, password)
+  }
+
+  async CreateUserEmail(email: string, password: string) {
+    return this.afAuth.createUserWithEmailAndPassword(email, password)
+  }
+
+  async ResetUserEmail(email: string) {
+    return this.afAuth.sendPasswordResetEmail(email)
+  }
 }

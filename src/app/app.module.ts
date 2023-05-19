@@ -11,17 +11,21 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore'
 import { AuthService } from './user/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { ProjectListComponent } from './home-page/project-list/project-list.component';
 import { KanbanComponent } from './kanban/kanban.component';
+import { SnackbarService } from './services/snackbar.service';
+import { FireplayComponent } from './fireplay/fireplay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ProjectListComponent,
-    KanbanComponent
+    KanbanComponent,
+    FireplayComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,10 @@ import { KanbanComponent } from './kanban/kanban.component';
     // provideAuth(() => getAuth()),
     // provideFirestore(() => getFirestore()),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, SnackbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

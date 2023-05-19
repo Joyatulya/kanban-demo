@@ -25,6 +25,12 @@ export class ProjectListComponent {
        title: 'BMI',
        subtitle: 'Calculate your BMI',
        description: 'Know about yout current health and take the best decisions accordingly'
+     },
+     {
+       title: 'Fireplay',
+       subtitle: 'Learn Firestore',
+       description: 'Learn and use firestore in your own projects',
+       url: '/fireplay'
      }
    ]
   
