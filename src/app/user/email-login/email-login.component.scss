@@ -1,0 +1,17 @@
+.email-login {
+  // display: flex;
+  padding: 2em 2em;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap : 1em;
+}
+
+.sign-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0.5em;
+}
