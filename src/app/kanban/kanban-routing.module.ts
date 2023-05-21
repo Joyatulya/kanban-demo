@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { KanbanComponent } from './kanban.component';
+import { BoardlistComponent } from './boardlist/boardlist.component';
 
 const routes: Routes = [
-  {path: '', component: KanbanComponent}
+  {path: '', component: BoardlistComponent}
 ];
 
 @NgModule({

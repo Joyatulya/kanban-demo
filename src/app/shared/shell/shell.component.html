@@ -36,7 +36,9 @@
       class = 'nav-items-lg'
       >
       <a mat-button routerLink="/kanban">Kanban</a>
-      <a mat-button routerLink="/login">Login</a>
+      <a mat-button *ngIf="!(afAuth.authState | async)" routerLink="/login">Login</a>
+      <span *ngIf="afAuth.authState | async as user">{{user.displayName}}</span>
+      <a mat-button *ngIf="afAuth.authState | async" (click) = "afAuth.signOut()" >Logout</a>
 
     </div>
     </mat-toolbar>

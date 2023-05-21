@@ -8,15 +8,8 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  
-  private name: string = 'Abhi koi nahi';
-
-  constructor(public authService: AuthService, public afAuth: AngularFireAuth) { 
-  }
-
-  get userName() {
-    return this.name
-  }
-  
-
+  constructor(
+    public authService: AuthService,
+    public afAuth: AngularFireAuth
+  ) {}
 }

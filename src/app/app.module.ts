@@ -15,16 +15,15 @@ import {AngularFirestoreModule} from '@angular/fire/compat/firestore'
 import { AuthService } from './user/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { ProjectListComponent } from './home-page/project-list/project-list.component';
-import { KanbanComponent } from './kanban/kanban.component';
 import { SnackbarService } from './services/snackbar.service';
 import { FireplayComponent } from './fireplay/fireplay.component';
+import { KanbanModule } from './kanban/kanban.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ProjectListComponent,
-    KanbanComponent,
     FireplayComponent
   ],
   imports: [
@@ -37,7 +36,8 @@ import { FireplayComponent } from './fireplay/fireplay.component';
     // provideFirestore(() => getFirestore()),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    KanbanModule
   ],
   providers: [AuthService, SnackbarService],
   bootstrap: [AppComponent]
