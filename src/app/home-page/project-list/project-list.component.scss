@@ -5,4 +5,8 @@
   justify-content: center;
   padding: 5em 4em;
   gap: 3em;
+
+  & > .project-list-outer {
+    border: 3px red solid;
+  }
 }

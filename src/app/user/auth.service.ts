@@ -12,7 +12,7 @@ export class AuthService {
     return this.AuthLogin(new GoogleAuthProvider());
   }
 
-  AuthLogin(provider : any) {
+  async AuthLogin(provider : any) {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
